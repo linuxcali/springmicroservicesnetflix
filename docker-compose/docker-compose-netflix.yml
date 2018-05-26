@@ -1,0 +1,28 @@
+version: '2'
+services:    
+    eureka:
+      image: '{dockerhub_name}/serviceregistry:0.0.1-SNAPSHOT'
+      ports:
+        - '8090:8090'
+    zuul:
+      image: '{dockerhub_name}/servicezuul:0.0.1-SNAPSHOT'
+      links:
+        - eureka
+      environment:
+        - EUREKA_URL=http://{eureka_url}:8090/eureka/
+      volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
+      ports:
+        - '8095:8095'
+      depends_on:
+        - eureka
+    microservice:
+      image: '{dockerhub_name}/servicesaludar:0.0.1-SNAPSHOT'
+      links:
+        - eureka
+        - zuul
+      environment:
+        - EUREKA_URL=http://{eureka_url}:8090/eureka/
+      depends_on:
+        - eureka
+        - zuul
