@@ -1,0 +1,25 @@
+spring:
+  application:
+     name: service-saludar
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:http://localhost:8090/eureka/}
+      
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}} 
+
+server:
+  port: 0 
+  
+management:
+  endpoint:
+    info:
+      enabled: true
+    env:
+      enabled: true  
+    beans:
+      enabled: true
+    mappings:
+      enabled: true

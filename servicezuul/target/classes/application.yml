@@ -1,0 +1,15 @@
+zuul:
+  routes:
+    saludos:
+      path: /saludar/**
+      serviceId: SERVICE-SALUDAR
+      stripPrefix: false
+     
+eureka:
+  client:
+    registerWithEureka: false
+    service-url:
+      defaultZone: ${EUREKA_URL:http://localhost:8090/eureka/}
+ 
+server:
+  port: 8095 
