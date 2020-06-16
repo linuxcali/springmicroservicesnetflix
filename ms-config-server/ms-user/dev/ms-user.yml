@@ -1,0 +1,5 @@
+server:
+  port: ${port:8889}
+spring:
+  application:
+    name: ms-user
