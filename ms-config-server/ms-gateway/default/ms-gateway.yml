@@ -1,0 +1,3 @@
+zuul:
+  routes:
+    ms-user: /api/user/**
