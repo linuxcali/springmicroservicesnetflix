@@ -27,8 +27,8 @@ spring:
     port: 26
     username: info@isaiaslopezti.com 
     password: Prueba@2020*
-    properties.mail.smtp:
-      auth: true
+    #properties.mail.smtp:
+    # auth: true
       # starttls.enable: true
 security:
   basic:
