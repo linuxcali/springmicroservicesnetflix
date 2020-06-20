@@ -23,7 +23,7 @@ spring:
     consumer:
       group-id: ms_mail_consumer
   mail:
-    host: mail.isaiaslopezti.com
+    host: isaiaslopezti.com
     port: 465
     username: info@isaiaslopezti.com 
     password: Prueba@2020*
