@@ -1,15 +1,6 @@
 server:
   port: 8082
 
-# Discovery Server Access
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_URL:http://localhost:8090/eureka/}
-  instance:
-    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-    hostname: localhost
-
 spring:
   h2:
     console:
@@ -26,6 +17,7 @@ spring:
     properties:
       hibernate.dialect: org.hibernate.dialect.H2Dialect    
   kafka:
+    bootstrap-servers: localhost:9092
     consumer:
       group-id: ms_mail_consumer
   mail:
@@ -39,4 +31,3 @@ spring:
 security:
   basic:
     enabled: false    
-    
