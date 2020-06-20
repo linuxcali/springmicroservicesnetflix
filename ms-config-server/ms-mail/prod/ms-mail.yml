@@ -18,6 +18,8 @@ spring:
       hibernate.dialect: org.hibernate.dialect.H2Dialect    
   kafka:
     bootstrap-servers: localhost:9092
+    topic:
+      userCreated: USER_CREATED_TOPIC
     consumer:
       group-id: ms_mail_consumer
   mail:
