@@ -1,3 +1,11 @@
+#zuul:
+#  routes:
+#    ms-user: /api/user/**
+
+
 zuul:
   routes:
-    ms-user: /api/user/**
+    usuarios:
+      path: /api/user/**
+      serviceId: MS-USER
+      stripPrefix: false
