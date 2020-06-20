@@ -23,10 +23,10 @@ spring:
     consumer:
       group-id: ms_mail_consumer
   mail:
-    host: smtp.gmail.com
-    port: 587
-    username: linuxcali@gmail.com 
-    password: analu790114
+    host: mail.isaiaslopezti.com
+    port: 465
+    username: info@isaiaslopezti.com 
+    password: Prueba@2020*
     properties.mail.smtp:
       auth: true
       starttls.enable: true
