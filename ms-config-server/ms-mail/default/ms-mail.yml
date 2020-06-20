@@ -23,13 +23,13 @@ spring:
     consumer:
       group-id: ms_mail_consumer
   mail:
-    host: isaiaslopezti.com
-    port: 465
+    host: mail.isaiaslopezti.com 
+    port: 26
     username: info@isaiaslopezti.com 
     password: Prueba@2020*
     properties.mail.smtp:
       auth: true
-      starttls.enable: true
+      # starttls.enable: true
 security:
   basic:
     enabled: false    
