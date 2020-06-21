@@ -1,5 +1,8 @@
 spring:
   kafka:
+    bootstrap-servers: localhost:9092
+    topic:
+      userCreated: USER_CREATED_TOPIC
     consumer:
       group-id: ms_auth_consumer
   h2:
