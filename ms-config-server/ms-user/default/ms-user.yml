@@ -31,4 +31,4 @@ spring:
       userCreated: USER_CREATED_TOPIC
 security:
   basic:
-    enabled: false
+    enabled: true
